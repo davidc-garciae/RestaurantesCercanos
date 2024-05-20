@@ -46,7 +46,8 @@
             gMapControl1.GrayScaleMode = false;
             gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             gMapControl1.LevelsKeepInMemory = 5;
-            gMapControl1.Location = new Point(302, 92);
+            gMapControl1.Location = new Point(431, 153);
+            gMapControl1.Margin = new Padding(4, 5, 4, 5);
             gMapControl1.MarkersEnabled = true;
             gMapControl1.MaxZoom = 2;
             gMapControl1.MinZoom = 2;
@@ -60,7 +61,7 @@
             gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             gMapControl1.SelectedAreaFillColor = Color.FromArgb(33, 65, 105, 225);
             gMapControl1.ShowTileGridLines = false;
-            gMapControl1.Size = new Size(936, 548);
+            gMapControl1.Size = new Size(1337, 913);
             gMapControl1.TabIndex = 0;
             gMapControl1.Zoom = 0D;
             gMapControl1.Load += gMapControl1_Load;
@@ -73,46 +74,52 @@
             dataGrid.AllowUserToResizeColumns = false;
             dataGrid.AllowUserToResizeRows = false;
             dataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGrid.Location = new Point(12, 92);
+            dataGrid.Location = new Point(17, 153);
+            dataGrid.Margin = new Padding(4, 5, 4, 5);
             dataGrid.Name = "dataGrid";
+            dataGrid.RowHeadersWidth = 62;
             dataGrid.RowTemplate.Height = 25;
-            dataGrid.Size = new Size(274, 530);
+            dataGrid.Size = new Size(391, 883);
             dataGrid.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("FiraCode Nerd Font", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(12, 14);
+            label1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(17, 23);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(216, 19);
+            label1.Size = new Size(301, 29);
             label1.TabIndex = 3;
             label1.Text = "Métodos de Ordenamiento";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("FiraCode Nerd Font Propo", 26.2499962F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(512, 29);
+            label2.Font = new Font("Microsoft Sans Serif", 26.2499962F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(731, 48);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(525, 43);
+            label2.Size = new Size(605, 61);
             label2.TabIndex = 4;
             label2.Text = "Seleccione su Ubicación";
             // 
             // labelTime
             // 
             labelTime.AutoSize = true;
-            labelTime.Location = new Point(12, 628);
+            labelTime.Location = new Point(17, 1047);
+            labelTime.Margin = new Padding(4, 0, 4, 0);
             labelTime.Name = "labelTime";
-            labelTime.Size = new Size(144, 15);
+            labelTime.Size = new Size(218, 25);
             labelTime.TabIndex = 5;
             labelTime.Text = "Tiempo de ordenamiento:";
             // 
             // buttonSort
             // 
-            buttonSort.Location = new Point(234, 14);
+            buttonSort.Location = new Point(334, 23);
+            buttonSort.Margin = new Padding(4, 5, 4, 5);
             buttonSort.Name = "buttonSort";
-            buttonSort.Size = new Size(62, 58);
+            buttonSort.Size = new Size(89, 97);
             buttonSort.TabIndex = 6;
             buttonSort.Text = "Ordenar";
             buttonSort.UseVisualStyleBackColor = true;
@@ -120,19 +127,20 @@
             // 
             // comboBox1
             // 
-            comboBox1.Font = new Font("FiraCode Nerd Font", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Método Intercambio", "Método Selección", "Método Inserción" });
-            comboBox1.Location = new Point(12, 46);
+            comboBox1.Location = new Point(17, 77);
+            comboBox1.Margin = new Padding(4, 5, 4, 5);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(216, 23);
+            comboBox1.Size = new Size(307, 30);
             comboBox1.TabIndex = 7;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1250, 652);
+            ClientSize = new Size(1786, 1087);
             Controls.Add(comboBox1);
             Controls.Add(buttonSort);
             Controls.Add(labelTime);
@@ -140,6 +148,7 @@
             Controls.Add(label1);
             Controls.Add(dataGrid);
             Controls.Add(gMapControl1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGrid).EndInit();

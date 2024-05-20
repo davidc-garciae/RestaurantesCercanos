@@ -106,12 +106,20 @@ namespace RestaurantesCercanos
             marker.ToolTipText = string.Format("Ubicación: \n Latitud {0} \n Longitud: {1}", lat, lng);
 
             // Calcular la distancia entre la posición actual y las coordenadas del DataFrame
+            var currentCoord = new GeoCoordinate(lat, lng);
+            CalcularDistancias(currentCoord);
+        }
+
+
+
+        private void CalcularDistancias(GeoCoordinate currentCoord)
+        {
             foreach (DataRow row in dataTable.Rows)
             {
                 double latDB = Convert.ToDouble(row["lat"]);
                 double lngDB = Convert.ToDouble(row["lng"]);
 
-                var currentCoord = new GeoCoordinate(lat, lng);
+
                 var dbCoord = new GeoCoordinate(latDB, lngDB);
 
                 double distancia = currentCoord.GetDistanceTo(dbCoord);
@@ -156,7 +164,7 @@ namespace RestaurantesCercanos
             stopwatch.Reset(); // Reinicia el Stopwatch
             stopwatch.Start(); // Inicia la medición del tiempo
 
-            int n = dataTable.Rows.Count; 
+            int n = dataTable.Rows.Count;
             for (int i = 0; i < n - 1; i++)
             {
                 for (int j = 0; j < n - i - 1; j++)
@@ -189,7 +197,7 @@ namespace RestaurantesCercanos
             stopwatch.Reset(); // Reinicia el Stopwatch
             stopwatch.Start(); // Inicia la medición del tiempo
 
-            int n = dataTable.Rows.Count; 
+            int n = dataTable.Rows.Count;
             for (int i = 0; i < n - 1; i++)
             {
                 // Encuentra el índice del elemento más pequeño en el subarray no ordenado
@@ -230,7 +238,7 @@ namespace RestaurantesCercanos
             stopwatch.Reset(); // Reinicia el Stopwatch
             stopwatch.Start(); // Inicia la medición del tiempo
 
-            int n = dataTable.Rows.Count; 
+            int n = dataTable.Rows.Count;
             DataTable dataTableOrdenado = dataTable.Clone(); // Clonar la estructura del DataTable original
 
             for (int i = 0; i < n; i++)
@@ -272,7 +280,7 @@ namespace RestaurantesCercanos
 
             if (comboBox1.SelectedItem == null)
             {
-                metodoSeleccionado = "Método Intercambio";
+                metodoSeleccionado = "Método Inserción";
                 OrdenarInsercion();
             }
             else
